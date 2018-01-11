@@ -1,1 +1,1 @@
-Swilar, and angularjs wrapper over swiper.
+Swilar. An angularjs wrapper over swiper.
