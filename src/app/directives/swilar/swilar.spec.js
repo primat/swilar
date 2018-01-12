@@ -1,16 +1,16 @@
-import SwilerModule from './swiler';
-import SwilerController from './swiler.controller';
-import SwilerComponent from './swiler.component';
-import SwilerTemplate from './swiler.html';
+import SwilarModule from './swilar';
+import SwilarController from './swilar.controller';
+import SwilarComponent from './swilar.directive';
+import SwilarTemplate from './swilar.html';
 
-describe('Swiler', () => {
+describe('Swilar', () => {
   let $rootScope, makeController;
 
-  beforeEach(window.module(SwilerModule));
+  beforeEach(window.module(SwilarModule));
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
     makeController = () => {
-      return new SwilerController();
+      return new SwilarController();
     };
   }));
 
@@ -30,20 +30,20 @@ describe('Swiler', () => {
     // template specs
     // tip: use regex to ensure correct bindings are used e.g., {{  }}
     it('has name in template [REMOVE]', () => {
-      expect(SwilerTemplate).to.match(/{{\s?\$ctrl\.name\s?}}/g);
+      expect(SwilarTemplate).to.match(/{{\s?\$ctrl\.name\s?}}/g);
     });
   });
 
   describe('Component', () => {
     // component/directive specs
-    let component = SwilerComponent;
+    let component = SwilarComponent;
 
     it('includes the intended template', () => {
-      expect(component.template).to.equal(SwilerTemplate);
+      expect(component.template).to.equal(SwilarTemplate);
     });
 
     it('invokes the right controller', () => {
-      expect(component.controller).to.equal(SwilerController);
+      expect(component.controller).to.equal(SwilarController);
     });
   });
 });

@@ -2,13 +2,15 @@ import angular from 'angular';
 import uiRouter from '@uirouter/angularjs';
 import Common from './common/common';
 import Components from './components/components';
+import Directives from './directives/directives';
 import AppComponent from './app.component';
 import 'normalize.css';
 
 angular.module('app', [
-    uiRouter,
-    Common,
-    Components
+  uiRouter,
+  Common,
+  Components,
+  Directives
   ])
   .config(($locationProvider) => {
     "ngInject";
