@@ -8,6 +8,7 @@ let swilarDirective = function () {
     restrict : "E",
     scope: {
       initialSlide: '@',
+      loop: '@',
       speed: '@',
       spaceBetween: '@'
     },
